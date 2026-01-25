@@ -6,6 +6,34 @@
     <title>Shop | New Ground Australia</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Shopify buy button – navy buttons, Playfair Display */
+        .shopify-buy__btn,
+        .shopify-buy-frame__product__buy-btn,
+        [data-shopify-buy-button] button,
+        .shopify-buy__layout-vertical button,
+        .shopify-buy__product__title,
+        .shopify-buy__product__price,
+        .shopify-buy-frame__product__title,
+        .shopify-buy-frame__product__price {
+            font-family: 'Playfair Display', serif !important;
+        }
+        .shopify-buy__btn,
+        .shopify-buy-frame__product__buy-btn,
+        [data-shopify-buy-button] button,
+        .shopify-buy__layout-vertical button {
+            background-color: #161b3d !important;
+            color: #f4f4f4 !important;
+            border-color: #161b3d !important;
+        }
+        .shopify-buy__btn:hover,
+        .shopify-buy-frame__product__buy-btn:hover,
+        [data-shopify-buy-button] button:hover {
+            background-color: #1e2554 !important;
+            border-color: #1e2554 !important;
+            color: #f4f4f4 !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -70,23 +98,9 @@
                     </svg>
                 </div>
                 <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                    <!-- NGA Trucker Cap -->
-                    <div style="text-align: center;">
-                        <h3 style="margin-bottom: 1rem;">NGA Trucker Cap</h3>
-                        <div id='product-component-1769299147536'></div>
-                    </div>
-
-                    <!-- Common Sense T-Shirt -->
-                    <div style="text-align: center;">
-                        <h3 style="margin-bottom: 1rem;">Common Sense T-Shirt</h3>
-                        <div id='product-component-1769299336661'></div>
-                    </div>
-
-                    <!-- Stand with Pauline T-shirt -->
-                    <div style="text-align: center;">
-                        <h3 style="margin-bottom: 1rem;">Stand with Pauline T-shirt</h3>
-                        <div id='product-component-1769299383797'></div>
-                    </div>
+                    <div style="text-align: center;"><div id='product-component-1769299147536'></div></div>
+                    <div style="text-align: center;"><div id='product-component-1769299336661'></div></div>
+                    <div style="text-align: center;"><div id='product-component-1769299383797'></div></div>
                 </div>
             </div>
         </section>
@@ -250,18 +264,21 @@
               "margin-left": "20px",
               "margin-bottom": "50px"
             }
-          }
+          },
+          "button": {
+            "background-color": "#161b3d",
+            "color": "#f4f4f4",
+            "font-family": "'Playfair Display', serif"
+          },
+          "title": { "font-family": "'Playfair Display', serif" },
+          "price": { "font-family": "'Playfair Display', serif" }
         },
-        "text": {
-          "button": "Add to cart"
-        }
+        "text": { "button": "Add to cart" }
       },
       "productSet": {
         "styles": {
           "products": {
-            "@media (min-width: 601px)": {
-              "margin-left": "-20px"
-            }
+            "@media (min-width: 601px)": { "margin-left": "-20px" }
           }
         }
       },
@@ -279,18 +296,27 @@
               "margin-left": "0px",
               "margin-bottom": "0px"
             }
-          }
+          },
+          "button": {
+            "background-color": "#161b3d",
+            "color": "#f4f4f4",
+            "font-family": "'Playfair Display', serif"
+          },
+          "title": { "font-family": "'Playfair Display', serif" },
+          "price": { "font-family": "'Playfair Display', serif" }
         },
-        "text": {
-          "button": "Add to cart"
-        }
+        "text": { "button": "Add to cart" }
       },
       "option": {},
       "cart": {
-        "text": {
-          "total": "Subtotal",
-          "button": "Checkout"
-        }
+        "styles": {
+          "button": {
+            "background-color": "#161b3d",
+            "color": "#f4f4f4",
+            "font-family": "'Playfair Display', serif"
+          }
+        },
+        "text": { "total": "Subtotal", "button": "Checkout" }
       },
       "toggle": {}
     },
@@ -341,18 +367,21 @@
               "margin-left": "20px",
               "margin-bottom": "50px"
             }
-          }
+          },
+          "button": {
+            "background-color": "#161b3d",
+            "color": "#f4f4f4",
+            "font-family": "'Playfair Display', serif"
+          },
+          "title": { "font-family": "'Playfair Display', serif" },
+          "price": { "font-family": "'Playfair Display', serif" }
         },
-        "text": {
-          "button": "Add to cart"
-        }
+        "text": { "button": "Add to cart" }
       },
       "productSet": {
         "styles": {
           "products": {
-            "@media (min-width: 601px)": {
-              "margin-left": "-20px"
-            }
+            "@media (min-width: 601px)": { "margin-left": "-20px" }
           }
         }
       },
@@ -370,18 +399,27 @@
               "margin-left": "0px",
               "margin-bottom": "0px"
             }
-          }
+          },
+          "button": {
+            "background-color": "#161b3d",
+            "color": "#f4f4f4",
+            "font-family": "'Playfair Display', serif"
+          },
+          "title": { "font-family": "'Playfair Display', serif" },
+          "price": { "font-family": "'Playfair Display', serif" }
         },
-        "text": {
-          "button": "Add to cart"
-        }
+        "text": { "button": "Add to cart" }
       },
       "option": {},
       "cart": {
-        "text": {
-          "total": "Subtotal",
-          "button": "Checkout"
-        }
+        "styles": {
+          "button": {
+            "background-color": "#161b3d",
+            "color": "#f4f4f4",
+            "font-family": "'Playfair Display', serif"
+          }
+        },
+        "text": { "total": "Subtotal", "button": "Checkout" }
       },
       "toggle": {}
     },
@@ -432,18 +470,21 @@
               "margin-left": "20px",
               "margin-bottom": "50px"
             }
-          }
+          },
+          "button": {
+            "background-color": "#161b3d",
+            "color": "#f4f4f4",
+            "font-family": "'Playfair Display', serif"
+          },
+          "title": { "font-family": "'Playfair Display', serif" },
+          "price": { "font-family": "'Playfair Display', serif" }
         },
-        "text": {
-          "button": "Add to cart"
-        }
+        "text": { "button": "Add to cart" }
       },
       "productSet": {
         "styles": {
           "products": {
-            "@media (min-width: 601px)": {
-              "margin-left": "-20px"
-            }
+            "@media (min-width: 601px)": { "margin-left": "-20px" }
           }
         }
       },
@@ -461,18 +502,27 @@
               "margin-left": "0px",
               "margin-bottom": "0px"
             }
-          }
+          },
+          "button": {
+            "background-color": "#161b3d",
+            "color": "#f4f4f4",
+            "font-family": "'Playfair Display', serif"
+          },
+          "title": { "font-family": "'Playfair Display', serif" },
+          "price": { "font-family": "'Playfair Display', serif" }
         },
-        "text": {
-          "button": "Add to cart"
-        }
+        "text": { "button": "Add to cart" }
       },
       "option": {},
       "cart": {
-        "text": {
-          "total": "Subtotal",
-          "button": "Checkout"
-        }
+        "styles": {
+          "button": {
+            "background-color": "#161b3d",
+            "color": "#f4f4f4",
+            "font-family": "'Playfair Display', serif"
+          }
+        },
+        "text": { "total": "Subtotal", "button": "Checkout" }
       },
       "toggle": {}
     },
