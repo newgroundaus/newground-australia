@@ -109,7 +109,7 @@
                 <div style="display: flex; justify-content: center; align-items: flex-start; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; max-width: 1200px; margin-left: auto; margin-right: auto;">
                     <div style="text-align: center; flex: 0 0 auto; min-width: 280px;"><div id='product-component-1769299336661'></div></div>
                     <div style="text-align: center; flex: 0 0 auto; min-width: 280px;"><div id='product-component-1769299147536'></div></div>
-                    <div style="text-align: center; flex: 0 0 auto; min-width: 280px;"><div id='product-component-1769299383797'></div></div>
+                    <div style="text-align: center; flex: 0 0 auto; min-width: 280px;"><div id='product-component-1769338736656'></div></div>
                 </div>
             </div>
         </section>
@@ -467,8 +467,8 @@
         });
         ShopifyBuy.UI.onReady(client).then(function (ui) {
           ui.createComponent('product', {
-            id: '10336573063461',
-            node: document.getElementById('product-component-1769299383797'),
+            id: '10337867792677',
+            node: document.getElementById('product-component-1769338736656'),
             moneyFormat: '%24%7B%7Bamount%7D%7D',
             options: {
       "product": {
@@ -488,12 +488,16 @@
           "title": { "font-family": "'Playfair Display', serif" },
           "price": { "font-family": "'Playfair Display', serif" }
         },
-        "text": { "button": "Add to cart" }
+        "text": {
+          "button": "Add to cart"
+        }
       },
       "productSet": {
         "styles": {
           "products": {
-            "@media (min-width: 601px)": { "margin-left": "-20px" }
+            "@media (min-width: 601px)": {
+              "margin-left": "-20px"
+            }
           }
         }
       },
@@ -520,7 +524,9 @@
           "title": { "font-family": "'Playfair Display', serif" },
           "price": { "font-family": "'Playfair Display', serif" }
         },
-        "text": { "button": "Add to cart" }
+        "text": {
+          "button": "Add to cart"
+        }
       },
       "option": {},
       "cart": {
@@ -531,7 +537,10 @@
             "font-family": "'Playfair Display', serif"
           }
         },
-        "text": { "total": "Subtotal", "button": "Checkout" }
+        "text": {
+          "total": "Subtotal",
+          "button": "Checkout"
+        }
       },
       "toggle": {}
     },
