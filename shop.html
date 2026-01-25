@@ -54,7 +54,7 @@
             </div>
         </section>
 
-        <!-- Product Grid Placeholder -->
+        <!-- Product Grid -->
         <section>
             <div class="container">
                 <h2 class="section-title">Featured Products</h2>
@@ -69,38 +69,23 @@
                         <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2L12 17.6l-6 3.6 2.4-7.2-6-4.8h7.6z"/>
                     </svg>
                 </div>
-                <div class="product-grid">
-                    <!-- Product 1 -->
-                    <div class="product-card">
-                        <h3>New Ground T-Shirt</h3>
-                        <p>Show your support with our official t-shirt featuring the New Ground Australia logo.</p>
-                        <p style="font-weight: 600; margin: 1rem 0;">$35.00</p>
-                        <!-- Shopify Buy Button Goes Here -->
-                        <div class="placeholder-section" style="padding: 1rem; margin-top: 1rem;">
-                            <p style="font-size: 0.85rem;">Shopify Buy Button</p>
-                        </div>
+                <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <!-- NGA Trucker Cap -->
+                    <div style="text-align: center;">
+                        <h3 style="margin-bottom: 1rem;">NGA Trucker Cap</h3>
+                        <div id='product-component-1769299147536'></div>
                     </div>
 
-                    <!-- Product 2 -->
-                    <div class="product-card">
-                        <h3>Sticker Pack</h3>
-                        <p>Set of high-quality vinyl stickers featuring New Ground Australia branding.</p>
-                        <p style="font-weight: 600; margin: 1rem 0;">$12.00</p>
-                        <!-- Shopify Buy Button Goes Here -->
-                        <div class="placeholder-section" style="padding: 1rem; margin-top: 1rem;">
-                            <p style="font-size: 0.85rem;">Shopify Buy Button</p>
-                        </div>
+                    <!-- Common Sense T-Shirt -->
+                    <div style="text-align: center;">
+                        <h3 style="margin-bottom: 1rem;">Common Sense T-Shirt</h3>
+                        <div id='product-component-1769299336661'></div>
                     </div>
 
-                    <!-- Product 3 -->
-                    <div class="product-card">
-                        <h3>Australian Flag</h3>
-                        <p>Show your Australian pride with an Australian Flag. Australian made.</p>
-                        <p style="font-weight: 600; margin: 1rem 0;">$18.00</p>
-                        <!-- Shopify Buy Button Goes Here -->
-                        <div class="placeholder-section" style="padding: 1rem; margin-top: 1rem;">
-                            <p style="font-size: 0.85rem;">Shopify Buy Button</p>
-                        </div>
+                    <!-- Stand with Pauline T-shirt -->
+                    <div style="text-align: center;">
+                        <h3 style="margin-bottom: 1rem;">Stand with Pauline T-shirt</h3>
+                        <div id='product-component-1769299383797'></div>
                     </div>
                 </div>
             </div>
@@ -125,36 +110,12 @@
                     <p>Support New Ground Australia by purchasing official merchandise. All proceeds help fund our activities and advance our mission of building a better future for Australia.</p>
                     <p>From t-shirts and caps to stickers and more, our merchandise lets you show your support while helping our movement grow. Every purchase makes a difference.</p>
                     <div style="text-align: center; margin: 2rem 0;">
-                        <a href="#" class="btn">Visit Our Store</a>
+                        <a href="https://shop.newgroundaus.com" target="_blank" rel="noopener noreferrer" class="btn">Visit Our Store</a>
                     </div>
-                    <p style="text-align: center; font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">
-                        <em>This button will link to your Shopify store</em>
-                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Shopify Integration Note -->
-        <section>
-            <div class="container">
-                <div class="content-section">
-                    <div class="placeholder-section">
-                        <h3>Shopify Integration</h3>
-                        <p>This page is set up to integrate with Shopify Buy Buttons. To add products:</p>
-                        <ol style="text-align: left; max-width: 600px; margin: 1rem auto;">
-                            <li>Create products in your Shopify store</li>
-                            <li>Generate Buy Buttons for each product</li>
-                            <li>Replace the placeholder sections with the Buy Button code</li>
-                            <li>Update product information as needed</li>
-                        </ol>
-                        <p style="margin-top: 1rem; font-size: 0.9rem;">
-                            <!-- Shopify Buy Button Goes Here -->
-                            <em>For more information, visit: <a href="https://help.shopify.com/en/manual/online-store/osb/shopify-buy-button" target="_blank" style="text-decoration: underline;">Shopify Buy Button Documentation</a></em>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
@@ -246,6 +207,280 @@
         
         // Auto-update copyright year
         document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Shopify Buy Buttons -->
+    <!-- NGA Trucker Cap -->
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'kqvm24-fw.myshopify.com',
+          storefrontAccessToken: '76c847838524214010879ca3e716ef47',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('product', {
+            id: '10335287247141',
+            node: document.getElementById('product-component-1769299147536'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+      "product": {
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "calc(25% - 20px)",
+              "margin-left": "20px",
+              "margin-bottom": "50px"
+            }
+          }
+        },
+        "text": {
+          "button": "Add to cart"
+        }
+      },
+      "productSet": {
+        "styles": {
+          "products": {
+            "@media (min-width: 601px)": {
+              "margin-left": "-20px"
+            }
+          }
+        }
+      },
+      "modalProduct": {
+        "contents": {
+          "img": false,
+          "imgWithCarousel": true,
+          "button": false,
+          "buttonWithQuantity": true
+        },
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "100%",
+              "margin-left": "0px",
+              "margin-bottom": "0px"
+            }
+          }
+        },
+        "text": {
+          "button": "Add to cart"
+        }
+      },
+      "option": {},
+      "cart": {
+        "text": {
+          "total": "Subtotal",
+          "button": "Checkout"
+        }
+      },
+      "toggle": {}
+    },
+          });
+        });
+      }
+    })();
+    /*]]>*/
+    </script>
+
+    <!-- Common Sense T-Shirt -->
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'kqvm24-fw.myshopify.com',
+          storefrontAccessToken: '76c847838524214010879ca3e716ef47',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('product', {
+            id: '10335168266533',
+            node: document.getElementById('product-component-1769299336661'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+      "product": {
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "calc(25% - 20px)",
+              "margin-left": "20px",
+              "margin-bottom": "50px"
+            }
+          }
+        },
+        "text": {
+          "button": "Add to cart"
+        }
+      },
+      "productSet": {
+        "styles": {
+          "products": {
+            "@media (min-width: 601px)": {
+              "margin-left": "-20px"
+            }
+          }
+        }
+      },
+      "modalProduct": {
+        "contents": {
+          "img": false,
+          "imgWithCarousel": true,
+          "button": false,
+          "buttonWithQuantity": true
+        },
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "100%",
+              "margin-left": "0px",
+              "margin-bottom": "0px"
+            }
+          }
+        },
+        "text": {
+          "button": "Add to cart"
+        }
+      },
+      "option": {},
+      "cart": {
+        "text": {
+          "total": "Subtotal",
+          "button": "Checkout"
+        }
+      },
+      "toggle": {}
+    },
+          });
+        });
+      }
+    })();
+    /*]]>*/
+    </script>
+
+    <!-- Stand with Pauline T-shirt -->
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+      if (window.ShopifyBuy) {
+        if (window.ShopifyBuy.UI) {
+          ShopifyBuyInit();
+        } else {
+          loadScript();
+        }
+      } else {
+        loadScript();
+      }
+      function loadScript() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = scriptURL;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+        script.onload = ShopifyBuyInit;
+      }
+      function ShopifyBuyInit() {
+        var client = ShopifyBuy.buildClient({
+          domain: 'kqvm24-fw.myshopify.com',
+          storefrontAccessToken: '76c847838524214010879ca3e716ef47',
+        });
+        ShopifyBuy.UI.onReady(client).then(function (ui) {
+          ui.createComponent('product', {
+            id: '10336573063461',
+            node: document.getElementById('product-component-1769299383797'),
+            moneyFormat: '%24%7B%7Bamount%7D%7D',
+            options: {
+      "product": {
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "calc(25% - 20px)",
+              "margin-left": "20px",
+              "margin-bottom": "50px"
+            }
+          }
+        },
+        "text": {
+          "button": "Add to cart"
+        }
+      },
+      "productSet": {
+        "styles": {
+          "products": {
+            "@media (min-width: 601px)": {
+              "margin-left": "-20px"
+            }
+          }
+        }
+      },
+      "modalProduct": {
+        "contents": {
+          "img": false,
+          "imgWithCarousel": true,
+          "button": false,
+          "buttonWithQuantity": true
+        },
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "100%",
+              "margin-left": "0px",
+              "margin-bottom": "0px"
+            }
+          }
+        },
+        "text": {
+          "button": "Add to cart"
+        }
+      },
+      "option": {},
+      "cart": {
+        "text": {
+          "total": "Subtotal",
+          "button": "Checkout"
+        }
+      },
+      "toggle": {}
+    },
+          });
+        });
+      }
+    })();
+    /*]]>*/
     </script>
 </body>
 </html>
