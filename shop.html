@@ -107,7 +107,7 @@
                     </svg>
                 </div>
                 <div style="display: flex; justify-content: center; align-items: flex-start; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; max-width: 1200px; margin-left: auto; margin-right: auto;">
-                    <div style="text-align: center; flex: 0 0 auto; min-width: 280px;"><div id='product-component-1769299336661'></div></div>
+                    <div style="text-align: center; flex: 0 0 auto; min-width: 280px;"><div id='product-component-1769349596411'></div></div>
                     <div style="text-align: center; flex: 0 0 auto; min-width: 280px;"><div id='product-component-1769299147536'></div></div>
                     <div style="text-align: center; flex: 0 0 auto; min-width: 280px;"><div id='product-component-1769338736656'></div></div>
                 </div>
@@ -338,106 +338,94 @@
 
     <!-- Common Sense T-Shirt -->
     <script type="text/javascript">
-    /*<![CDATA[*/
-    (function () {
-      var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-      if (window.ShopifyBuy) {
-        if (window.ShopifyBuy.UI) {
-          ShopifyBuyInit();
-        } else {
-          loadScript();
-        }
-      } else {
-        loadScript();
-      }
-      function loadScript() {
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = scriptURL;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-        script.onload = ShopifyBuyInit;
-      }
-      function ShopifyBuyInit() {
-        var client = ShopifyBuy.buildClient({
-          domain: 'kqvm24-fw.myshopify.com',
-          storefrontAccessToken: '76c847838524214010879ca3e716ef47',
-        });
-        ShopifyBuy.UI.onReady(client).then(function (ui) {
-          ui.createComponent('product', {
-            id: '10335168266533',
-            node: document.getElementById('product-component-1769299336661'),
-            moneyFormat: '%24%7B%7Bamount%7D%7D',
-            options: {
+/*<![CDATA[*/
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'kqvm24-fw.myshopify.com',
+      storefrontAccessToken: '76c847838524214010879ca3e716ef47',
+    });
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: '10337910554917',
+        node: document.getElementById('product-component-1769349596411'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "styles": {
       "product": {
-        "styles": {
-          "product": {
-            "@media (min-width: 601px)": {
-              "max-width": "calc(25% - 20px)",
-              "margin-left": "20px",
-              "margin-bottom": "50px"
-            }
-          },
-          "button": {
-            "background-color": "#161b3d",
-            "color": "#f4f4f4",
-            "font-family": "'Playfair Display', serif"
-          },
-          "title": { "font-family": "'Playfair Display', serif" },
-          "price": { "font-family": "'Playfair Display', serif" }
-        },
-        "text": { "button": "Add to cart" }
-      },
-      "productSet": {
-        "styles": {
-          "products": {
-            "@media (min-width: 601px)": { "margin-left": "-20px" }
-          }
+        "@media (min-width: 601px)": {
+          "max-width": "calc(25% - 20px)",
+          "margin-left": "20px",
+          "margin-bottom": "50px"
         }
-      },
-      "modalProduct": {
-        "contents": {
-          "img": false,
-          "imgWithCarousel": true,
-          "button": false,
-          "buttonWithQuantity": true
-        },
-        "styles": {
-          "product": {
-            "@media (min-width: 601px)": {
-              "max-width": "100%",
-              "margin-left": "0px",
-              "margin-bottom": "0px"
-            }
-          },
-          "button": {
-            "background-color": "#161b3d",
-            "color": "#f4f4f4",
-            "font-family": "'Playfair Display', serif"
-          },
-          "title": { "font-family": "'Playfair Display', serif" },
-          "price": { "font-family": "'Playfair Display', serif" }
-        },
-        "text": { "button": "Add to cart" }
-      },
-      "option": {},
-      "cart": {
-        "styles": {
-          "button": {
-            "background-color": "#161b3d",
-            "color": "#f4f4f4",
-            "font-family": "'Playfair Display', serif"
-          }
-        },
-        "text": { "total": "Subtotal", "button": "Checkout" }
-      },
-      "toggle": {}
-    },
-          });
-        });
       }
-    })();
-    /*]]>*/
-    </script>
+    },
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-20px"
+        }
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "button": false,
+      "buttonWithQuantity": true
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      }
+    },
+    "text": {
+      "button": "Add to cart"
+    }
+  },
+  "option": {},
+  "cart": {
+    "text": {
+      "total": "Subtotal",
+      "button": "Checkout"
+    }
+  },
+  "toggle": {}
+},
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
 
     <!-- Stand with Pauline T-shirt -->
     <script type="text/javascript">
