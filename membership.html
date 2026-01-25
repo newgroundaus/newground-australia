@@ -75,7 +75,7 @@
                     <div style="display: flex; justify-content: center; margin: 1rem 0;">
                         <iframe src="https://newgroundaus.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
                     </div>
-                    <p style="font-size: 0.85rem; margin-top: 1rem; opacity: 0.8;">please check your email to sign up for the paid membership</p>
+                    <p style="font-size: 0.95rem; margin-top: 1rem; opacity: 0.9;">Get the inside track on how we think, publish, and build the movement. <a href="#" id="playbook-download" style="text-decoration: underline; font-weight: 600;">Download the New Ground Australia Subscriber Playbook</a></p>
                 </div>
             </div>
         </section>
@@ -84,7 +84,7 @@
         <section style="padding-top: 2rem;">
             <div class="container">
                 <div class="content-section">
-                    <h2 class="section-title">Member Benefits</h2>
+                    <h2 class="section-title">Your Member Benefits</h2>
                     <div class="stars-decoration">
                         <svg viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2L12 17.6l-6 3.6 2.4-7.2-6-4.8h7.6z"/>
@@ -96,23 +96,28 @@
                             <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2L12 17.6l-6 3.6 2.4-7.2-6-4.8h7.6z"/>
                         </svg>
                     </div>
-                    <ul style="list-style: none; max-width: 600px; margin: 0 auto; padding: 0;">
-                        <li style="padding: 1rem 0; border-bottom: 1px solid rgba(244, 244, 244, 0.1);">
-                            <strong>Access to exclusive Substack articles</strong> and commentary
+                    <ol style="list-style: none; max-width: 720px; margin: 0 auto; padding: 0;">
+                        <li style="padding: 1.5rem 0; border-bottom: 1px solid rgba(244, 244, 244, 0.1);">
+                            <strong>1. Exclusive Substack Articles &amp; Commentary</strong>
+                            <p style="margin: 0.5rem 0 0; font-size: 0.95rem; opacity: 0.9; line-height: 1.5;">Gain access to content you won't find anywhere else. Our members get deeper analysis, behind-the-scenes context, and unfiltered commentary on politics, culture, and the issues shaping Australia today. Think of it as the insider lens that shows the story others won't tell.</p>
                         </li>
-                        <li style="padding: 1rem 0; border-bottom: 1px solid rgba(244, 244, 244, 0.1);">
-                            <strong>20% off all merchandise</strong> in the New Ground store
+                        <li style="padding: 1.5rem 0; border-bottom: 1px solid rgba(244, 244, 244, 0.1);">
+                            <strong>2. 20% Off All Merchandise</strong>
+                            <p style="margin: 0.5rem 0 0; font-size: 0.95rem; opacity: 0.9; line-height: 1.5;">Show your support in style. Members enjoy 20% off all items in the New Ground store. From apparel to accessories, so you can represent the movement while saving on every purchase.</p>
                         </li>
-                        <li style="padding: 1rem 0; border-bottom: 1px solid rgba(244, 244, 244, 0.1);">
-                            <strong>Private Discord community</strong> with member voting and discussion
+                        <li style="padding: 1.5rem 0; border-bottom: 1px solid rgba(244, 244, 244, 0.1);">
+                            <strong>3. Private Discord Community</strong>
+                            <p style="margin: 0.5rem 0 0; font-size: 0.95rem; opacity: 0.9; line-height: 1.5;">Connect with like-minded Australians in a members-only space. Participate in discussions, share ideas, and help shape the movement through member voting and exclusive conversations. This is where the community comes alive.</p>
                         </li>
-                        <li style="padding: 1rem 0; border-bottom: 1px solid rgba(244, 244, 244, 0.1);">
-                            <strong>Early access</strong> to merch drops, announcements, and releases
+                        <li style="padding: 1.5rem 0; border-bottom: 1px solid rgba(244, 244, 244, 0.1);">
+                            <strong>4. Early Access to Merch, Announcements &amp; Releases</strong>
+                            <p style="margin: 0.5rem 0 0; font-size: 0.95rem; opacity: 0.9; line-height: 1.5;">Members are always first in line. Get early access to new merchandise, updates, and exclusive releases before anyone else, ensuring you're ahead of the crowd.</p>
                         </li>
-                        <li style="padding: 1rem 0;">
-                            <strong>More to come...</strong>
+                        <li style="padding: 1.5rem 0 0;">
+                            <strong>5. More to Come…</strong>
+                            <p style="margin: 0.5rem 0 0; font-size: 0.95rem; opacity: 0.9; line-height: 1.5;">Our membership experience is just getting started. Expect new perks, surprises, and opportunities as the movement grows. Members will always have priority access to everything we launch next.</p>
                         </li>
-                    </ul>
+                    </ol>
                 </div>
             </div>
         </section>
@@ -253,6 +258,21 @@
         
         // Auto-update copyright year
         document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // PDF download handler to ensure proper file download
+        const playbookLink = document.getElementById('playbook-download');
+        if (playbookLink) {
+            playbookLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Create a temporary link to download the file
+                const link = document.createElement('a');
+                link.href = 'assets/Subscriber_Content_&_Publishing_Playbook.pdf';
+                link.download = 'New-Ground-Australia-Subscriber-Playbook.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        }
     </script>
 </body>
 </html>
