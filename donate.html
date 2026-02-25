@@ -21,6 +21,15 @@
             text-align: center;
         }
 
+        .donate-form-section .content-section {
+            text-align: center;
+        }
+
+        .donate-form-section .content-section p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .donation-details {
             background: rgba(22, 27, 61, 0.05);
             border: 1px solid rgba(22, 27, 61, 0.1);
@@ -135,6 +144,50 @@
             background: rgba(244, 244, 244, 0.05);
         }
 
+        .stripe-donate-wrap {
+            margin: 2rem auto;
+            display: block;
+            width: 100%;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .stripe-donate-wrap stripe-buy-button {
+            display: block;
+            width: 100% !important;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .stripe-donate-wrap iframe {
+            width: 100% !important;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .donate-form-section .payid-section {
+            text-align: center;
+        }
+
+        .payid-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(22, 27, 61, 0.05);
+            border: 1px solid rgba(22, 27, 61, 0.1);
+            border-radius: 4px;
+        }
+
+        body.dark-mode .payid-section {
+            background: rgba(244, 244, 244, 0.05);
+            border-color: rgba(244, 244, 244, 0.1);
+        }
+
         @media (max-width: 768px) {
             .donation-details {
                 padding: 1.5rem;
@@ -223,7 +276,7 @@
         </section>
 
         <!-- How to Donate -->
-        <section>
+        <section class="donate-form-section">
             <div class="container">
                 <div class="content-section">
                     <h2>How to Donate</h2>
@@ -238,28 +291,21 @@
                             <path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2L12 17.6l-6 3.6 2.4-7.2-6-4.8h7.6z"/>
                         </svg>
                     </div>
-                    <p>Donations are currently accepted via direct bank transfer or PayID. Please use the following details:</p>
+                    <p>Donate securely by card below, or use PayID if you prefer to pay from your bank.</p>
                     
-                    <div class="donation-details">
-                        <dl>
-                            <!-- Bank Details Go Here -->
-                            <dt>Account Name:</dt>
-                            <dd>New Ground Australia</dd>
-                            
-                            <dt>BSB:</dt>
-                            <dd>067-873</dd>
-                            
-                            <dt>Account Number:</dt>
-                            <dd>2181 1738</dd>
-                            
-                            <dt>OR PayID (email preferred):</dt>
-                            <dd>newgroundaus@gmail.com</dd>
-                        </dl>
+                    <!-- Stripe card image: edit in Stripe Dashboard → Payment Links → [your link] → Customize. Upload/replace product image; choose layout so image fills card and container has rounded corners. -->
+                    <div class="stripe-donate-wrap">
+                        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                        <stripe-buy-button
+                            buy-button-id="buy_btn_1T4VY9DEmNyI0ivMWk8ZpVUk"
+                            publishable-key="pk_live_51SsNHBDEmNyI0ivM331GYW2R2lZAJdkwBDrQRh7qHrHqi6U8uw71n2tvAOmg4T2IlH0qWkFefNM605YCybonCk0500PErgF3MZ">
+                        </stripe-buy-button>
                     </div>
                     
-                    <p style="margin-top: 1.5rem; font-size: 0.95rem; opacity: 0.9;"><strong>Note:</strong> The account may appear as "K Billing" on your bank statement. This is the temporary account holder name while the movement is in its early formation stage.</p>
-                    
-                    <p style="margin-top: 1.5rem;">Please include a reference when making your transfer (e.g., "Donation" or "Support"). This helps us track and acknowledge your contribution.</p>
+                    <div class="payid-section">
+                        <p style="margin: 0 0 0.5rem; font-weight: 500;">Or pay via PayID from your bank</p>
+                        <p style="margin: 0; font-size: 1.1rem; font-family: 'Courier New', monospace;">newgroundaus@gmail.com</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -283,7 +329,7 @@
                     
                     <div class="notice-box">
                         <p><strong>Current Status:</strong> New Ground Australia is currently in an early formation stage and is not yet incorporated.</p>
-                        <p>Donations are held temporarily in a dedicated account that is separate from any personal accounts. This is a short-term arrangement while we work toward formal incorporation.</p>
+                        <p>Donations are held temporarily in Stripe or a separate bank account that is distinct from any personal accounts. This is a short-term arrangement while we work toward formal incorporation.</p>
                         <p>Once New Ground Australia is incorporated as a Pty Ltd, all funds will be transferred to a formal business bank account. We are maintaining records of all donations in good faith and will ensure a smooth transition to the formal structure.</p>
                         <p>We are committed to transparency and accountability throughout this process.</p>
                     </div>
