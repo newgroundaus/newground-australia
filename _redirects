@@ -1,0 +1,31 @@
+/membership              /get-involved                  301
+/membership/             /get-involved                  301
+/membership.html         /get-involved                  301
+/shop                    /                              301
+/shop/                   /                              301
+/shop.html               /                              301
+/contact                 /get-involved                  301
+/contact/                /get-involved                  301
+/contact.html            /get-involved                  301
+/refund-policy           /donations-refunds-policy      301
+/refund-policy/          /donations-refunds-policy      301
+/refund-policy.html      /donations-refunds-policy      301
+/index.html              /                              301
+
+/about/                  /about                         301
+/values/                 /values                        301
+/get-involved/           /get-involved                  301
+/prayer/                 /prayer                        301
+/donate/                 /donate                        301
+/privacy-policy/         /privacy-policy                301
+/terms-conditions/       /terms-conditions              301
+/donations-refunds-policy/ /donations-refunds-policy    301
+
+/about                   /about.html                    200
+/values                  /values.html                   200
+/get-involved            /get-involved.html             200
+/prayer                  /prayer.html                   200
+/donate                  /donate.html                   200
+/privacy-policy          /privacy-policy.html           200
+/terms-conditions        /terms-conditions.html         200
+/donations-refunds-policy /donations-refunds-policy.html 200

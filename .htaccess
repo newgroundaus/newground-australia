@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Retired pages
+RewriteRule ^membership/?$ /get-involved [R=301,L]
+RewriteRule ^membership\.html$ /get-involved [R=301,L]
+RewriteRule ^shop/?$ / [R=301,L]
+RewriteRule ^shop\.html$ / [R=301,L]
+RewriteRule ^contact/?$ /get-involved [R=301,L]
+RewriteRule ^contact\.html$ /get-involved [R=301,L]
+RewriteRule ^refund-policy/?$ /donations-refunds-policy [R=301,L]
+RewriteRule ^refund-policy\.html$ /donations-refunds-policy [R=301,L]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Extensionless URLs for the current pages
+RewriteRule ^(about|values|get-involved|prayer|donate|privacy-policy|terms-conditions|donations-refunds-policy)/?$ $1.html [L]

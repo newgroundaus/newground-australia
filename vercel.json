@@ -1,0 +1,27 @@
+{
+  "redirects": [
+    { "source": "/membership", "destination": "/get-involved", "statusCode": 301 },
+    { "source": "/membership/", "destination": "/get-involved", "statusCode": 301 },
+    { "source": "/membership.html", "destination": "/get-involved", "statusCode": 301 },
+    { "source": "/shop", "destination": "/", "statusCode": 301 },
+    { "source": "/shop/", "destination": "/", "statusCode": 301 },
+    { "source": "/shop.html", "destination": "/", "statusCode": 301 },
+    { "source": "/contact", "destination": "/get-involved", "statusCode": 301 },
+    { "source": "/contact/", "destination": "/get-involved", "statusCode": 301 },
+    { "source": "/contact.html", "destination": "/get-involved", "statusCode": 301 },
+    { "source": "/refund-policy", "destination": "/donations-refunds-policy", "statusCode": 301 },
+    { "source": "/refund-policy/", "destination": "/donations-refunds-policy", "statusCode": 301 },
+    { "source": "/refund-policy.html", "destination": "/donations-refunds-policy", "statusCode": 301 },
+    { "source": "/index.html", "destination": "/", "statusCode": 301 }
+  ],
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/values", "destination": "/values.html" },
+    { "source": "/get-involved", "destination": "/get-involved.html" },
+    { "source": "/prayer", "destination": "/prayer.html" },
+    { "source": "/donate", "destination": "/donate.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/terms-conditions", "destination": "/terms-conditions.html" },
+    { "source": "/donations-refunds-policy", "destination": "/donations-refunds-policy.html" }
+  ]
+}

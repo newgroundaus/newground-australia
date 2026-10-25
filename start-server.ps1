@@ -1,22 +1,17 @@
 # PowerShell script to start the development server
+Set-Location $PSScriptRoot
 Write-Host "Starting New Ground Australia website server..." -ForegroundColor Green
 Write-Host ""
-Write-Host "Server will be available at: http://localhost:5500" -ForegroundColor Cyan
+Write-Host "Server will be available at: http://127.0.0.1:5500" -ForegroundColor Cyan
 Write-Host "Press CTRL+C to stop the server" -ForegroundColor Yellow
 Write-Host ""
 
-# Try Python first
 try {
-    python -m http.server 5500
+    python serve.py
 } catch {
-    Write-Host "Python not found. Trying Node.js..." -ForegroundColor Yellow
-    try {
-        npx http-server -p 5500 -o
-    } catch {
-        Write-Host ""
-        Write-Host "ERROR: Neither Python nor Node.js found." -ForegroundColor Red
-        Write-Host "Please install Python 3 or Node.js to run the server." -ForegroundColor Red
-        Write-Host ""
-        Read-Host "Press Enter to exit"
-    }
+    Write-Host ""
+    Write-Host "ERROR: Python was not found." -ForegroundColor Red
+    Write-Host "Install Python 3, then run this script again." -ForegroundColor Red
+    Write-Host ""
+    Read-Host "Press Enter to exit"
 }

@@ -6,9 +6,7 @@
             "type": "shell",
             "command": "python",
             "args": [
-                "-m",
-                "http.server",
-                "5500"
+                "serve.py"
             ],
             "isBackground": true,
             "problemMatcher": {
@@ -21,7 +19,7 @@
                 "background": {
                     "activeOnStart": true,
                     "beginsPattern": ".",
-                    "endsPattern": "Serving HTTP on"
+                    "endsPattern": "New Ground Australia site"
                 }
             },
             "presentation": {
