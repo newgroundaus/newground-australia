@@ -224,12 +224,15 @@ main:focus {
 .logo {
     display: flex;
     align-items: center;
+    max-width: calc(100% - 3.75rem);
+    min-width: 0;
     text-decoration: none;
 }
 
 .logo img {
-    height: 46px;
-    width: auto;
+    display: block;
+    width: min(14.125rem, 100%);
+    height: auto;
 }
 
 .menu-toggle {
